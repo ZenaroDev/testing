@@ -20,8 +20,7 @@ scripts:
 
 # Overrides on base-image
 overrides:
-  - firefox
-  - firefox-langpacks
+  - firefox firefox-langpacks
 # a list of urls of .repo files that should be added to your system
 # this is the proper way to add copr repos to your image
 extrarepos:

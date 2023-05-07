@@ -9,7 +9,14 @@ done
 echo "---"
 
 # remove the default firefox (from fedora) in favor of the flatpak
-rpm-ostree override remove firefox firefox-langpacks
+# rpm-ostree override remove firefox firefox-langpacks
+echo "-- Removing Packages defined in recipe.yml"
+overrides=$(yq '.overrides[]' < /usr/etc/ublue-recipe.yml)
+for pkg in $(echo -e "$overrides"); do \
+	echo "Removing ${pkg}" && \
+	rpm-ostree override remove $pkg; \
+done
+echo "---"
 
 repos=$(yq '.extrarepos[]' < /usr/etc/ublue-recipe.yml)
 if [[ -n "$repos" ]]; then

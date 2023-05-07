@@ -35,10 +35,15 @@ rpms:
   - python3-pip
   - libadwaita # libadwaita comes with silverblue, but not with other flavors
   # add your own below
+  - android-tools
+  - autojump
+  - heimdall
+  - htop
+  - lz4
+  - neofetch
   - neovim
   - pop-shell
-  - heimdall
-  - android-tools
+  - starship
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.
 # If you leave this empty you can use yafti for post-boot installation

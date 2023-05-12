@@ -27,7 +27,7 @@ overrides:
 extrarepos:
 # example:
 # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-37/atim-starship-fedora-37.repo
-
+  - https://copr.fedorainfracloud.org/coprs/carlwgeorge/hyprland/repo/fedora-38/carlwgeorge-hyprland-fedora-38.repo
 # These rpms will be installed from the fedora repository
 # using rpm-ostree and will be preinstalled in the final image
 rpms:
@@ -43,6 +43,7 @@ rpms:
   - neofetch
   - neovim
   - pop-shell
+  - hyprland
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.
 # If you leave this empty you can use yafti for post-boot installation
